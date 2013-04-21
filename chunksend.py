@@ -4,7 +4,7 @@ import os
 import subprocess
 import string
 import re
-#import Rtools
+
  
 class SendChunkCommand(sublime_plugin.TextCommand):
   def run(self, view): # runs on command
