@@ -11,6 +11,13 @@
       "name": "Run",
       "working_dir": "$file_path",
       "shell_cmd": "Rscript -e \"rmarkdown::render(input = '$file')\""
+    },
+    {
+      "name":"knit to tex",
+      "selector":"latex.knitr",
+      "working_dir": "$file_path",
+      "cmd": [ "Rscript -e \"library(knitr); knit('$file', output='$file_path/$file_base_name.tex')\"" ],
+      "shell": true
     }
   ]
 }
